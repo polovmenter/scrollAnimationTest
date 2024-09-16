@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .container {
     max-width: 1160px;
     margin-inline: auto;
@@ -29,6 +25,7 @@ body {
 .scroll-inner {
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 @media (max-width: 1200px) {
