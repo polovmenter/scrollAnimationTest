@@ -1,0 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1160px;
+    margin-inline: auto;
+    padding-inline: 30px;
+}
+
+.section {
+    height: 50vh;
+    background-color: aquamarine;
+}
+
+.section--red {
+    height: 50vh;
+    background-color: crimson;
+}
+
+.scroll-section {
+    padding-block: 100px;
+}
+
+.scroll-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+    .scroll-inner {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
+
+.scroll-item {
+    height: 200px;
+    max-width: 500px;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+.slide-left.active {
+    animation: slide-left 0.5s linear both;
+}
+
+.slide-right.active {
+    animation: slide-right 0.5s linear both;
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
